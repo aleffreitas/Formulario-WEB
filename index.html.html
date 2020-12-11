@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+	<head>
+		<title>Prova WEB</title>
+		<meta charset="utf-8" />
+		<meta name="author" content="Alef" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0" />
+        <link href="css/style.css" rel="stylesheet" />
+        <script src="js/script.js"></script>
+	</head>
+
+<body>
+    
+
+    <div class="wrapper">
+        
+        <div class="formulario1">
+            <form action="recebe.php" method="POST" id="formulario" name="formulario"> 
+                <div class="header">
+                    <div class="img"></div>
+                    <h1 id="titulo">Cadastro</h1>
+                        <h2 class="subtitulo">Informações Pessoais</h2>
+                </div><!--header-->                               
+                    <div class="teste">
+                        <span id="cod" style="visibility: hidden" required="O campo">O CAMPO NOME DEVE CONTER NO MÍNIMO 3 CARACTERES</span>
+                        <input type="text" placeholder="*NOME" name="nome" id="nome" onblur="valida()" required/>
+                        <input type="email" placeholder="*E-MAIL" name="email" id="email" required/>
+                        <input type="password" placeholder="*SENHA" name="NovaSenha" id="NovaSenha" required/>
+                        <input type="password" placeholder="*CONFIRME A SENHA" name="CNovaSenha" id="CNovaSenha" required/>
+                    </div><!--teste-->
+                    <br><br>                                       
+                    <p>SEXO</p>
+                    <p><label><input type="radio" name="sexo" id="masculino" onclick="validaSexo()"/>MASCULINO</label>
+                        <label><input type="radio" name="sexo" id="feminino" onclick="validaSexo()"/>FEMININO</label></p>
+                    <div class="teste2"><input type="text" id="alistamento" style="visibility: hidden" placeholder="NÚMERO DE ALISTAMENTO" /></div>
+                    <div clas="botao"><input type="submit" class="enviar" value="ENVIAR" onClick="validarSenha()" /></div>
+                    <p>* Campos Obrigatórios</p>
+                    
+            </form>
+        </div><!--formulario1-->
+    </div><!--wrapper-->		
+</body>
+
+</html>
